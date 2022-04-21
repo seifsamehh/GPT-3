@@ -1,0 +1,171 @@
+.navbar {
+    // position: sticky;
+    // top: 0;
+    // left: 0;
+    // z-index: 10;
+    @media screen and (max-width: 700px) {
+        padding: 1rem 2rem;
+    }
+    .links {
+        .logo {
+            h1 {
+                color: #fff;
+                font-size: 2rem;
+                font-family: var(--font-family);
+                font-weight: 700;
+                @media (min-width: 701px) and (max-width: 1050px) {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+        .category {
+            @media screen and (max-width: 1050px) {
+                display: none;
+            }
+            a {
+                font-size: 18px;
+                font-weight: 600;
+                color: #fff;
+                display: inline-block;
+                position: relative;
+                text-decoration: none;
+                margin: 0 1rem;
+                transition: margin 0.5s;
+                svg {
+                    width: 76px;
+                    height: 40px;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translate(-50%, 7px) translateZ(0);
+                    fill: none;
+                    stroke: var(--stroke);
+                    stroke-linecap: round;
+                    stroke-width: 2px;
+                    stroke-dasharray: var(--offset, 69px) 278px;
+                    stroke-dashoffset: 361px;
+                    transition: stroke .25s ease var(--stroke-delay, 0s), stroke-dasharray .35s;
+                }
+                .second,
+                .third,
+                .fourth {
+                    position: absolute;
+                    left: 50%;
+                    bottom: -20%;
+                    transform: translate(-50%, 7px) translateZ(0);
+                    fill: none;
+                    stroke: var(--stroke);
+                    stroke-linecap: round;
+                    stroke-width: 1px;
+                    stroke-dasharray: var(--offset, 69px) 278px;
+                    stroke-dashoffset: 361px;
+                    transition: stroke .25s ease var(--stroke-delay, 0s), stroke-dasharray .35s;
+                }
+                .second {
+                    width: 140px;
+                    height: 75px;
+                }
+                .third {
+                    width: 120px;
+                    height: 50px;
+                }
+                .fourth {
+                    width: 160px;
+                    height: 70px;
+                }
+                &:hover {
+                    --spacing: 4px;
+                    --stroke: #AE67FA;
+                    --stroke-delay: .1s;
+                    --offset: 180px;
+                }
+            }
+        }
+    }
+    .sign {
+        @media screen and (max-width: 550px) {
+            display: none;
+        }
+        .sign-in,.sign-up {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            @media screen and (max-width: 550px) {
+                font-size: 1.5rem;
+            }
+            @media (min-width: 551px) and (max-width: 700px) {
+                font-size: 1rem;
+            }
+            @media (min-width: 701px) and (max-width: 1050px) {
+                font-size: 1.8rem;
+            }
+        }
+        .sign-up {
+            background-color: #FF4820;
+            border-radius: 5px;
+        }
+    }
+    .menu {
+        display: none;
+        position: relative;
+        @media screen and (max-width: 1050px) {
+            display: flex;
+        }
+        .menu-container {
+            text-align: end;
+            background-color: var(--footer-bg);
+            position: absolute;
+            top: 40px;
+            right: 0;
+            min-width: 210px;
+            border-radius: 5px;
+            box-shadow: 0 0 5 rgba(0,0,0,0.2);
+            @media screen and (max-width: 550px) {
+                top: 20px;
+            }
+            .menu-links {
+                a {
+                    color: #fff;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    margin: 1rem 0;
+                    position: relative;
+                    @media screen and (max-width: 700px) {
+                        font-size: 1.5rem;
+                    }
+                    @media screen and (max-width: 1050px) {
+                        font-size: 1.7rem;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -10px;
+                        right: -30px;
+                        width: 205px;
+                        height: 2px;
+                        background-color: #AE67FA;
+                    }
+                }
+                .menu-sign {
+                    display: none;
+                    @media screen and (max-width: 550px) {
+                        display: block;
+                    }
+                    .menu-sign-in,.menu-sign-up {
+                        color: #fff;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        margin-bottom: 15px;
+                        @media screen and (max-width: 550px) {
+                            font-size: 1.5rem;
+                        }
+                    }
+                    .menu-sign-up {
+                        background-color: #FF4820;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

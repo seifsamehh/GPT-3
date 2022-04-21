@@ -1,0 +1,125 @@
+// google font
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+// global components
+:root {
+    --font-family: 'Manrope', sans-serif;
+    --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+    --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+    --color-bg: #040C18;
+    --footer-bg : #031B34;
+    --color-blog: #042c54;
+    --color-text: #81AFDD;
+    --color-subtext: #FF8A71;
+  }
+::selection {
+    background-color: #3e0080;
+    color: #fff;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+button,
+a,
+img {
+    user-select: none;
+}
+ul {
+    list-style: none;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--color-bg);
+    overflow-x: hidden;
+    background: linear-gradient(to right, #042c54, #06407a, #084f96, #000);
+    background-size: 400% 400%;
+    animation: animate-bg 10s infinite ease-in-out alternate;
+    @keyframes animate-bg {
+        0% {
+            background-position: 0 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0 50%;
+        }
+    }
+}
+a,
+.underline {
+    color: unset;
+    text-decoration: none;
+}
+.gradient-bg {
+    background: linear-gradient(to right, #042c54, #06407a, #084f96, #000);
+    background-size: 400% 400%;
+    animation: animate-bg 10s infinite ease-in-out alternate;
+    @keyframes animate-bg {
+        0% {
+            background-position: 0 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0 50%;
+        }
+    }
+}
+.section-padding {
+    padding: 4rem 6rem;
+    @media screen and (max-width: 550px) {
+        padding: 3rem 4rem;
+    }
+    @media screen and (max-width: 700px) {
+        padding: 4rem;
+    }
+}
+.section-margin {
+    margin: 4rem 6rem;
+    @media screen and (max-width: 550px) {
+        margin: 4rem 2rem;
+    }
+    @media screen and (max-width: 700px) {
+        margin: 2rem;
+    }
+}
+.scale-up-ver-top {
+	animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    @keyframes scale-up-ver-top {
+        0% {
+        -webkit-transform: scaleY(0.4);
+                transform: scaleY(0.4);
+        -webkit-transform-origin: 100% 0%;
+                transform-origin: 100% 0%;
+        }
+        100% {
+        -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+                transform-origin: 100% 0%;
+        }
+    }
+    @keyframes scale-up-ver-top {
+        0% {
+        -webkit-transform: scaleY(0.4);
+                transform: scaleY(0.4);
+        -webkit-transform-origin: 100% 0%;
+                transform-origin: 100% 0%;
+        }
+        100% {
+        -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+                transform-origin: 100% 0%;
+        }
+    }
+}

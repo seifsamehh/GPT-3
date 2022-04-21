@@ -1,0 +1,28 @@
+.brands {
+    .container {
+        width: 800px;
+        overflow: hidden;
+        .gallery {
+            padding: 1rem;
+            animation: trans 7s ease infinite alternate;
+            &:hover {
+                animation: none;
+            }
+            @keyframes trans {
+                0% {
+                    transform: translateX(-900px);
+                }
+                50% {
+                    transform: translateX(0px);
+                }
+                100% {
+                    transform: translateX(755px);
+                }
+            }
+            img {
+                cursor: pointer;
+                margin: 0 2rem;
+            }
+        }
+    }
+}

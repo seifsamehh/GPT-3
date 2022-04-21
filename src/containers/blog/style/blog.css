@@ -1,0 +1,183 @@
+.wrapperr h1 {
+  margin-left: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #F49867), color-stop(50%, #fff), color-stop(60%, #AE67FA));
+  background: linear-gradient(to right, #F49867 10%, #fff 50%, #AE67FA 60%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: textclip 1.5s linear infinite;
+          animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+
+@media screen and (max-width: 550px) {
+  .wrapperr h1 {
+    font-size: 2.9rem;
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 551px) and (max-width: 700px) {
+  .wrapperr h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1050px) {
+  .wrapperr h1 {
+    font-size: 4rem;
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .blog {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.blog .left .card {
+  background-color: var(--color-blog);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.blog .left .card:hover {
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+}
+
+.blog .left .card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.blog .left .card:hover > img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.blog .left .card h5 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.blog .left .card p {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 550px) {
+  .blog .left .card p {
+    font-size: 1.6rem;
+  }
+}
+
+.blog .right .up .card-1,
+.blog .right .up .card-2, .blog .right .down .card-1,
+.blog .right .down .card-2 {
+  margin-bottom: 1rem;
+  background-color: var(--color-blog);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.blog .right .up .card-1:hover,
+.blog .right .up .card-2:hover, .blog .right .down .card-1:hover,
+.blog .right .down .card-2:hover {
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+}
+
+.blog .right .up .card-1 img,
+.blog .right .up .card-2 img, .blog .right .down .card-1 img,
+.blog .right .down .card-2 img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.blog .right .up .card-1:hover > img,
+.blog .right .up .card-2:hover > img, .blog .right .down .card-1:hover > img,
+.blog .right .down .card-2:hover > img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.blog .right .up .card-1 h5,
+.blog .right .up .card-2 h5, .blog .right .down .card-1 h5,
+.blog .right .down .card-2 h5 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.blog .right .up .card-1 p,
+.blog .right .up .card-2 p, .blog .right .down .card-1 p,
+.blog .right .down .card-2 p {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 550px) {
+  .blog .right .up .card-1 p,
+  .blog .right .up .card-2 p, .blog .right .down .card-1 p,
+  .blog .right .down .card-2 p {
+    font-size: 1.6rem;
+  }
+}
+/*# sourceMappingURL=blog.css.map */

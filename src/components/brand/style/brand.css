@@ -1,0 +1,51 @@
+.brands .container {
+  width: 800px;
+  overflow: hidden;
+}
+
+.brands .container .gallery {
+  padding: 1rem;
+  -webkit-animation: trans 7s ease infinite alternate;
+          animation: trans 7s ease infinite alternate;
+}
+
+.brands .container .gallery:hover {
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes trans {
+  0% {
+    -webkit-transform: translateX(-900px);
+            transform: translateX(-900px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(755px);
+            transform: translateX(755px);
+  }
+}
+
+@keyframes trans {
+  0% {
+    -webkit-transform: translateX(-900px);
+            transform: translateX(-900px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(755px);
+            transform: translateX(755px);
+  }
+}
+
+.brands .container .gallery img {
+  cursor: pointer;
+  margin: 0 2rem;
+}
+/*# sourceMappingURL=brand.css.map */

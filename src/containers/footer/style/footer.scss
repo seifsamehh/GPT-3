@@ -1,0 +1,143 @@
+.footer  {
+    background-color: var(--footer-bg);
+    .footer-header {
+        margin-bottom: 3.5rem;
+        .wrapper {
+            h1 {
+                text-align: center;
+                margin-bottom: 2rem;
+                color: #fff;
+                font-size: 2.3rem;
+                text-transform: uppercase;
+                font-weight: 700;
+                background: linear-gradient(to right,#F49867  10%, #fff 50%, #AE67FA 60%);
+                background-size: auto auto;
+                background-clip: border-box;
+                background-size: 200% auto;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: textclip 1.5s linear infinite;
+                display: inline-block;
+                @media screen and (max-width: 550px) {
+                    font-size: 2.9rem;
+                }
+                @media (min-width: 551px) and (max-width: 700px) {
+                    font-size: 2.8rem;
+                }
+                @media (min-width: 701px) and (max-width: 1050px) {
+                    font-size: 4rem;
+                }
+            }
+        }
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+        button {
+            outline: none;
+            border: 1px solid #fff;
+            padding: 1rem 2rem;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: 0.3s;
+            @media screen and (max-width: 550px) {
+                font-size: 1.2rem;
+            }
+            &:hover {
+                background-color: #fff;
+                color: #000;
+            }
+        }
+    }
+    .footer-links {
+        @media screen and (max-width: 1050px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .first-col,
+        .second-col,
+        .third-col,
+        .fourth-col {
+            color: #fff;
+            @media screen and (max-width: 700px) {
+                margin: 20px 0;
+            }
+            h1 {
+                font-size: 1.6rem;
+                font-weight: 800;
+                margin-bottom: 2rem;
+                border-bottom: 5px dotted transparent;
+                transition: 0.6s;
+                @media screen and (max-width: 1050px) {
+                    text-align: center;
+                }
+            }
+            &:hover > h1 {
+                border-bottom: 5px dotted #AE67FA;
+            }
+            .links {
+                @media screen and (max-width: 1050px) {
+                    align-items: center;
+                    justify-content: center;
+                }
+                .underline {
+                    --line: #AE67FA;
+                    --color: #fff;
+                    margin: 10px 0;
+                    font-weight: 400;
+                    letter-spacing: 2px;
+                    color: var(--color);
+                    position: relative;
+                    span {
+                        background-image: linear-gradient(0deg, var(--line) 0%, var(--line) 100%);
+                        background-position: 100% 100%;
+                        background-repeat: no-repeat;
+                        background-size: var(--background-size, 100%) 1px;
+                        transition: background-size .2s linear var(--background-delay, .15s);
+                        font-size: 16px;
+                        line-height: 18px;
+                        transform: translateZ(0);
+                    }
+                    svg {
+                        vertical-align: top;
+                        display: inline;
+                        line-height: 1;
+                        width: 20px;
+                        height: 30px;
+                        position: relative;
+                        left: -2px;
+                        fill: none;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 1px;
+                        stroke: var(--line);
+                        stroke-dasharray: 7.95 30;
+                        stroke-dashoffset: var(--stroke-dashoffset, 46);
+                        transition: stroke-dashoffset var(--stroke-duration, .15s) var(--stroke-easing, linear) var(--stroke-delay, 0s);
+                    }
+                    &:hover {
+                        --background-size: 0%;
+                        --background-delay: 0s;
+                        --stroke-dashoffset: 26;
+                        --stroke-duration: .3s;
+                        --stroke-easing: cubic-bezier(.3, 1.5, .5, 1);
+                        --stroke-delay: .195s;
+                    }
+                }
+            }
+            p {
+                font-size: 1.1rem;
+                font-weight: 200;
+                letter-spacing: 2px;
+                @media screen and (max-width: 1050px) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

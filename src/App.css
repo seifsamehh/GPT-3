@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+:root {
+  --font-family: 'Manrope', sans-serif;
+  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  --color-bg: #040C18;
+  --footer-bg: #031B34;
+  --color-blog: #042c54;
+  --color-text: #81AFDD;
+  --color-subtext: #FF8A71;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-moz-selection {
+  background-color: #3e0080;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+::selection {
+  background-color: #3e0080;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+button,
+a,
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+ul {
+  list-style: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--color-bg);
+  overflow-x: hidden;
+  background: -webkit-gradient(linear, left top, right top, from(#042c54), color-stop(#06407a), color-stop(#084f96), to(#000));
+  background: linear-gradient(to right, #042c54, #06407a, #084f96, #000);
+  background-size: 400% 400%;
+  -webkit-animation: animate-bg 10s infinite ease-in-out alternate;
+          animation: animate-bg 10s infinite ease-in-out alternate;
+}
+
+@-webkit-keyframes animate-bg {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes animate-bg {
+  0% {
+    background-position: 0 50%;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
   }
 }
+
+a,
+.underline {
+  color: unset;
+  text-decoration: none;
+}
+
+.gradient-bg {
+  background: -webkit-gradient(linear, left top, right top, from(#042c54), color-stop(#06407a), color-stop(#084f96), to(#000));
+  background: linear-gradient(to right, #042c54, #06407a, #084f96, #000);
+  background-size: 400% 400%;
+  -webkit-animation: animate-bg 10s infinite ease-in-out alternate;
+          animation: animate-bg 10s infinite ease-in-out alternate;
+}
+
+@keyframes animate-bg {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.section-padding {
+  padding: 4rem 6rem;
+}
+
+@media screen and (max-width: 550px) {
+  .section-padding {
+    padding: 3rem 4rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section-padding {
+    padding: 4rem;
+  }
+}
+
+.section-margin {
+  margin: 4rem 6rem;
+}
+
+@media screen and (max-width: 550px) {
+  .section-margin {
+    margin: 4rem 2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section-margin {
+    margin: 2rem;
+  }
+}
+
+.scale-up-ver-top {
+  -webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: scale-up-ver-top 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-ver-top {
+  0% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+}
+
+@keyframes scale-up-ver-top {
+  0% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+}
+
+@keyframes scale-up-ver-top {
+  0% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+}
+/*# sourceMappingURL=App.css.map */

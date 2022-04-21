@@ -1,0 +1,178 @@
+.features {
+    background: radial-gradient(circle at 20% 10%, rgb(0, 56, 116) 0%, rgba(4,12,24,1) 100%);
+    @media screen and (max-width: 1050px) {
+        flex-direction: column;
+    }
+    @media (min-width: 551px) and (max-width: 700px) {
+        padding: 1.25rem;
+    }
+    .heading {
+        .wrapper {
+            h1 {
+                margin-bottom: 2rem;
+                color: #fff;
+                font-size: 2.3rem;
+                text-transform: uppercase;
+                font-weight: 700;
+                background: linear-gradient(to right,#F49867  10%, #fff 50%, #AE67FA 60%);
+                background-size: auto auto;
+                background-clip: border-box;
+                background-size: 200% auto;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: textclip 1.5s linear infinite;
+                display: inline-block;
+                @media screen and (max-width: 550px) {
+                    font-size: 2.9rem;
+                }
+                @media (min-width: 551px) and (max-width: 700px) {
+                    font-size: 2.8rem;
+                }
+                @media (min-width: 701px) and (max-width: 1050px) {
+                    font-size: 4rem;
+                }
+            }
+        }
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+        div {
+            margin: 1rem 2rem;
+            p {
+                position: relative;
+                text-decoration: none;
+                color: var(--color-subtext);
+                padding: 0.2rem 0;
+                font-size: 1.2rem;
+                @media screen and (max-width: 550px) {
+                    font-size: 2rem;
+                }
+                @media (min-width: 551px) and (max-width: 700px) {
+                    font-size: 2.3rem;
+                }
+                @media (min-width: 701px) and (max-width: 1050px) {
+                    font-size: 2.5rem;
+                }
+                &::before {
+                    --line-width: 100%;
+                    --line-height: 1px;
+                    --line-easing: ease;
+                    --line-transition-duration: 300ms;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: var(--line-width);
+                    height: var(--line-height);
+                    transform-origin: right;
+                    transform: scaleX(0);
+                    background: var(--color-subtext);
+                    transition: transform var(--line-transition-duration) var(--line-easing);
+                    z-index: 1;
+                }
+                &:hover {
+                    &::before {
+                        transform-origin: left;
+                        transform: scaleX(1);
+                    }
+                    span {
+                        --deg: -45deg;
+                        &::before {
+                            transform: rotate(var(--deg));
+                        }
+                        &::after {
+                            transform: translateX(-1px) rotate(var(--deg));
+                        }
+                    }
+                }
+                span {
+                    --line-arrow-width: 1px;
+                    --line-arrow-height: 6px;
+                    --line-arrow-easing: cubic-bezier(0.3, 1.5, 0.5, 1);
+                    --line-arrow-transition-duration: 200ms;
+                    --line-arrow-transition-delay: 240ms;
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        right: -2%;
+                        bottom: 0px;
+                        background: var(--color-subtext);
+                        transition: transform var(--line-arrow-transition-duration)
+                            var(--line-arrow-easing);
+                        transition-delay: var(--line-arrow-transition-delay);
+                        z-index: 2;
+                    }
+                    &::before {
+                        width: var(--line-arrow-width);
+                        height: var(--line-arrow-height);
+                        transform-origin: 0% 100%;
+                        transform: rotate(-90deg);
+                    }
+                    &::after {
+                        height: var(--line-arrow-width);
+                        width: var(--line-arrow-height);
+                        transform-origin: 100% 0%;
+                        transform: translateX(-1px) rotate(0deg);
+                    }
+                }
+            }
+        }
+    }
+    .features-content {
+        @media screen and (max-width: 700px) {
+            margin-top: 1.8rem;
+        }
+        .one,
+        .two,
+        .three,
+        .four {
+            @media screen and (max-width: 1050px) {
+                flex-direction: column;
+                padding: 20px 0;
+            }
+            h1 {
+                color: #fff;
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-right: 2rem;
+                position: relative;
+                @media screen and (max-width: 550px) {
+                    font-size: 2rem;
+                }
+                @media (min-width: 551px) and (max-width: 700px) {
+                    font-size: 2.3rem;
+                }
+                @media (min-width: 701px) and (max-width: 1050px) {
+                    font-size: 2.5rem;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -10px;
+                    left: 0;
+                    width: 30px;
+                    height: 4px;
+                    background-color: #AE67FA;
+                    transition: 0.5s;
+                }
+                &:hover::before {
+                    width: 100%;
+                }
+            }
+            p {
+                color: var(--color-text);
+                font-size: 1rem;
+                text-align: start;
+                @media screen and (max-width: 1050px) {
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

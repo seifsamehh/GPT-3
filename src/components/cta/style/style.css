@@ -1,0 +1,71 @@
+.cta {
+  padding: 3rem;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#ad66fa), color-stop(70%, #f49866));
+  background: linear-gradient(90deg, #ad66fa 0%, #f49866 70%);
+  background-size: 400% 400%;
+  -webkit-animation: animate-bg 6s infinite ease-in-out alternate;
+          animation: animate-bg 6s infinite ease-in-out alternate;
+}
+
+@media screen and (max-width: 1050px) {
+  .cta {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
+@-webkit-keyframes animate-bg {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes animate-bg {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.cta .left-content h5 {
+  font-size: 1rem;
+  color: #000;
+  font-weight: 700;
+}
+
+.cta .left-content p {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: 900;
+}
+
+.cta button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .cta button {
+    margin-top: 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
